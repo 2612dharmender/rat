@@ -1,0 +1,20 @@
+<html><head><title>yesterday assign</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</link>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$.ajax({url:"https://jsonplaceholder.typicode.com/posts",success:function(response){
+for (y in response){
+$("table").append("<tr><td>"+response[y].userId+"</td><td>"+response[y].id+"</td><td>"+response[y].title+"</td><td>"+response[y].body+"</td></tr>");
+}
+}});
+});
+    </script>
+    </head>
+<body class='container'>
+<table border=5>
+    <tr><td>userId</td><td>id</td><td>title</td><td>body</td></tr>
+    </table>
+</body>
+</html>
